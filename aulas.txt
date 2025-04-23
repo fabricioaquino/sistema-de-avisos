@@ -1,0 +1,22 @@
+app => pasta da aplicação 
+    => http => requisições
+        -> controller
+    => models => modelos 
+
+=> bootstrap => inicialização do projeto
+
+=> config
+
+=> database
+    => factories => criar dados de teste
+    => migration => tabela bd
+    => seeders => criar dados no bd
+
+public => arquivos publico da aplicação
+
+=>parametro opcional 'servico/{codigo?}'
+
+Controller tipo invokable => single action
+php artisan make:controller Nome -- invokable
+uma unica ação dentro dele
+Route::get('nome-rota' , Nome::class) => Não precisa dizer o nome do metodo
