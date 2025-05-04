@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('avisos', function (Blueprint $table) {
             $table->id();
             $table->string('titulo', 80);
+            $table->text('mensagem');
             $table->timestamp('data_publicacao');
             $table->date('data_expedicao');
-            $table->enum('status')
-            $table->enum('obrigatorio')
+            $table->enum('status', ['ativo', 'inativo'])->default('ativo');
+            $table->enum('obrigatorio', ['sim', 'nao']);
             $table->timestamps();
         });
     }
